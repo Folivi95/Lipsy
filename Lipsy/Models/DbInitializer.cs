@@ -34,7 +34,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/cTkytPW/2.jpg",
                             InStock = true,
                             IsPreferredLipstick = true,
-                            ImageThumbnailUrl = "https://i.ibb.co/cTkytPW/2.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/1qb0p8k/2-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -48,7 +48,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/h7yfqKG/3.jpg",
                             InStock = true,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/h7yfqKG/3.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/xSwC8B6/3-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -64,7 +64,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/pZthCXw/5.jpg",
                             InStock = true,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/pZthCXw/5.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/126m6pf/5-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -79,7 +79,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/Zxh23r5/6.jpg",
                             InStock = true,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/Zxh23r5/6.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/MkNQKfZ/6-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -94,7 +94,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/XX8Ly5q/7.jpg",
                             InStock = true,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/XX8Ly5q/7.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/qpc099z/7-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -106,7 +106,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/rQY0X6D/8.jpg",
                             InStock = false,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/rQY0X6D/8.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/Yc3hXPr/8-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -119,7 +119,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/Br9pd4r/9.jpg",
                             InStock = false,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/Br9pd4r/9.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/yPb8pc5/9-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -133,7 +133,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/KXb5tKN/10.jpg",
                             InStock = false,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/KXb5tKN/10.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/w0WYSSJ/10-thumbnail.jpg"
                         },
                         new Lipstick
                         {
@@ -146,7 +146,7 @@ namespace Lipsy.Models
                             ImageUrl = "https://i.ibb.co/L69SLRc/1.jpg",
                             InStock = false,
                             IsPreferredLipstick = false,
-                            ImageThumbnailUrl = "https://i.ibb.co/L69SLRc/1.jpg"
+                            ImageThumbnailUrl = "https://i.ibb.co/b796dmh/1-thumbnail.jpg"
                         }
                     );
                 }
