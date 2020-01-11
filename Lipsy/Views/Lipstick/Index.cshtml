@@ -10,20 +10,9 @@
 
 <div class="row">
     @{
-        foreach (var lipstick in Model.Lipsticks)
+        foreach (Lipstick lipstick in Model.Lipsticks)
         {
-        <div class="col-3 p-1 cards-deck">
-            <div class="card">
-                <img src="@lipstick.ImageThumbnailUrl" class="card-img-top" alt="@lipstick.ImageThumbnailUrl">
-                <div class="card-body">
-                    <h5 class="card-title">@lipstick.Name</h5>
-                    <p class="card-text">@lipstick.ShortDescription</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">@lipstick.Price.ToString("c")</small>
-                </div>
-            </div>
-        </div>  
+            @await Html.PartialAsync("LipsticksSummary", lipstick)
         }
     }
 </div>

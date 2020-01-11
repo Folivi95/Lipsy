@@ -1,0 +1,14 @@
+﻿@model Lipstick
+
+<div class="col-3 p-1 cards-deck">
+    <div class="card">
+        <img src="@Model.ImageThumbnailUrl" class="card-img-top" alt="@Model.ImageThumbnailUrl">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">@Model.ShortDescription</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">@Model.Price.ToString("c")</small>
+        </div>
+    </div>
+</div>  
