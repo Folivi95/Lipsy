@@ -28,7 +28,7 @@ namespace Lipsy.Controllers
         {
             LipstickViewModel vm = new LipstickViewModel();
             vm.Lipsticks = lipstickRepository.Lipsticks;
-            vm.CurrentCategory = "Drink Category";
+            vm.CurrentCategory = "Lipstick Category";
             return View(vm);
         }
 
