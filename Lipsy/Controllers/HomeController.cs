@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Lipsy.Models;
+using Lipsy.Interfaces;
+using Lipsy.Models.ViewModels;
 
 namespace Lipsy.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ILipstickRepository lipstickRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ILipstickRepository lipstick)
         {
             _logger = logger;
+            lipstickRepository = lipstick;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                PreferredLipsticks = lipstickRepository.PreferredLipsticks
+            };
+
+            return View(homeViewModel);
         }
 
         public IActionResult Privacy()
