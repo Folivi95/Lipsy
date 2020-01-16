@@ -34,6 +34,7 @@ namespace Lipsy
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
             services.AddTransient<ILipstickRepository, LipstickRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddHttpContextAccessor();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
