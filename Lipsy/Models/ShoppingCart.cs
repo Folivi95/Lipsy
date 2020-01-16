@@ -22,7 +22,7 @@ namespace Lipsy.Models
 
         public static ShoppingCart GetCart(IServiceProvider serviceProvider)
         {
-            ISession session = serviceProvider.GetRequiredService<HttpContextAccessor>()?.HttpContext.Session;
+            ISession session = serviceProvider.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
             var context = serviceProvider.GetService<AppDbContext>();
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
