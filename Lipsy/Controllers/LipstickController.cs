@@ -24,12 +24,41 @@ namespace Lipsy.Controllers
             lipstickRepository = lipstick;
         }
 
-        public ViewResult Index()
+        public ViewResult Index(string category)
         {
-            LipstickViewModel vm = new LipstickViewModel();
-            vm.Lipsticks = lipstickRepository.Lipsticks;
-            vm.CurrentCategory = "Lipstick Category";
-            return View(vm);
+            string _category = category;
+            IEnumerable<Lipstick> lipsticks = null;
+
+            string currentCategory = string.Empty;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                lipsticks = this.lipstickRepository.Lipsticks.OrderBy(n => n.LipstickId);
+                currentCategory = "All Lipsticks";
+            }
+            else
+            {
+                if (string.Equals("Nude", _category, StringComparison.OrdinalIgnoreCase))
+                {
+                    lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Nude")).OrderBy(p => p.Name);
+                }
+                else if (string.Equals("Party-Glam", _category, StringComparison.OrdinalIgnoreCase))
+                {
+                    lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Party-Glam")).OrderBy(p => p.Name);
+                }
+                else if (string.Equals("Clear-Gloss", _category, StringComparison.OrdinalIgnoreCase))
+                {
+                    lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Clear-Gloss")).OrderBy(p => p.Name);
+                }
+            }
+
+            var lipstickViewModel = new LipstickViewModel
+            {
+                Lipsticks = lipsticks,
+                CurrentCategory = currentCategory
+            };
+
+            return View(lipstickViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

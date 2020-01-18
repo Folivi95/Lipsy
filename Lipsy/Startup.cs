@@ -64,6 +64,11 @@ namespace Lipsy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "categoryFilter",
+                    pattern: "Lipstick/{action=Index}/{category?}",
+                    defaults: new { Controller="Lipstick", action="Index"});
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
