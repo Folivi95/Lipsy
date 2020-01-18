@@ -41,14 +41,17 @@ namespace Lipsy.Controllers
                 if (string.Equals("Nude", _category, StringComparison.OrdinalIgnoreCase))
                 {
                     lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Nude")).OrderBy(p => p.Name);
+                    currentCategory = "Nude Collections";
                 }
                 else if (string.Equals("Party-Glam", _category, StringComparison.OrdinalIgnoreCase))
                 {
                     lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Party-Glam")).OrderBy(p => p.Name);
+                    currentCategory = "Party Glam Collections";
                 }
                 else if (string.Equals("Clear-Gloss", _category, StringComparison.OrdinalIgnoreCase))
                 {
                     lipsticks = this.lipstickRepository.Lipsticks.Where(n => n.Category.CategoryName.Equals("Clear-Gloss")).OrderBy(p => p.Name);
+                    currentCategory = "Clear Gloss Collection";
                 }
             }
 
